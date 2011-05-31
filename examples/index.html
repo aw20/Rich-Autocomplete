@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>
+			Rich Autocomplete Plugin
+		</title>
+		<link rel="stylesheet" type="text/css" media="screen" href="../src/aw20.richac.css" />
+		<script type="text/javascript" src="jquery-1.5.2.min.js"></script>
+		<script type="text/javascript" src="../src/aw20.richac.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				//local datasource demo				
+				$("#myTestFieldLocal").richac({ onSelect: function(itemData) {console.log(itemData);}, data: {set1: [{label: "abc1"}, {label: "bbc1"}, {label: "cbc1"}], set2: [{label: "abc2"}, {label: "bbc2"}, {label: "cbc2"}], set3: [{label: "abc3"}, {label: "bbc3"}, {label: "cbc3"}]} });
+			});
+		</script>
+	</head>
+	<body>
+		<div style="margin: 0 auto 0 auto; text-align: center;">
+			Rich Autocomplete Plugin<br />
+			aw2.0<br />
+			http://www.aw20.co.uk/<br />
+			<br />
+			Min 2 chars, 300 delay
+			<div>
+				<div>
+					<div style="display: inline;">Search (Local):</div> <input type="text" id="myTestFieldLocal" value="" />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
