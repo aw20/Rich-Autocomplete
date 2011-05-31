@@ -1,0 +1,48 @@
+Rich Autocomplete Plugin 
+aw2.0
+http://www.aw20.co.uk/
+
+
+--- DESCRIPTION ---
+A jQuery plugin which allows autocomplete features, placing the results into sets representing an autocomplete from several sources but in one convenient interface.
+
+
+--- INSTALLATION ---
+The jQuery library should already be imported on the page (1.5.2 recommended).
+
+The following files must also be imported on the page:
+aw20.richac.js    the plugin workings
+aw20.richac.css   the plugin styling
+
+
+--- USAGE ---
+$("#myTestInput").richac({ data: {set1: [{label: "abc1"}, {label: "bbc1"}, {label: "cbc1"}], set2: [{label: "abc2"}, {label: "bbc2"}, {label: "cbc2"}], set3: [{label: "abc3"}, {label: "bbc3"}, {label: "cbc3"}]} });
+
+Once the plugin is applied to a text input element, any input will open a menu which performs an autocomplete across many data sets and displays matching results from each set.
+
+The UP and DOWN arrows can be used to highlight an option from the menu.
+The RETURN key can be used to select an option from the menu.
+The ESC key is used to cancel an autocomplete and close the menu.
+The MOUSE can also be used to make a selection.
+
+
+--- OPTIONS ---
+data              a structure of data sets, each being an array of further structures with label elements which will be searched for results.
+OR
+url               a URL for an ajax request which will return json in the form of the data parameter description above, the arguments passed are "searchQuery" and "itemLimit".
+
+itemLimit         the maximum matching strings to be displayed for each result set (default: 4).
+categoryLimit     the maximum categories to be displayed at once if several are returned (default: 3).
+minCharacters     the minimum characters to be in the field before triggering a search (default: 2).
+minDelay          the delay after the last typed input before triggering a search (default: 300).
+closeOnBlank      if true the autocomplete menu will be closed when the field is cleared (default: true).
+onSearch          a callback run for each element when a search is performed, can tell the UI what key to display for each item and perform any necessary filtering, this function will be passed both the search string and the full structure of data for each element. (default: uses the label structure key as the displayed element, and filters based on each label containing the search string).
+onSelect          a callback run when an item is selected, this function will be passed the full structure of data for the selected element, or the current text string if return was used without an element selection.
+
+
+--- TESTING ---
+The compatibility I have managed to test is below, covering some of the latest browser versions:
+Firefox 4             WORKING
+Safari 5.0.2          WORKING
+Chrome 10.0.648.204   WORKING
+Internet Explorer 8   TBC

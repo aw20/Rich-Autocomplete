@@ -1,0 +1,58 @@
+/*
+ * Rich Autocomplete Plugin 
+ * aw2.0
+ * http://www.aw20.co.uk/
+ */
+
+input {
+	width: 300px;
+}
+
+div#acui {
+	position: absolute;
+	z-index: 3000;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+	font-size: 10pt;
+	background-color: #ffffff;
+	overflow: show;
+}
+
+#acui_category {
+	border-top: solid 2px #e8e8e8;
+	border-bottom: solid 2px #e8e8e8;
+	background-color: #eeeeee;
+}
+
+#acui_category:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+#acui_category_title {
+	background-color: #eeeeee;
+	width: 30%;
+	height: 100%;
+	display: block;
+	float: left;
+}
+
+#acui_category_items {
+	width: 70%;
+	height: 100%;
+	display: block;
+	float: left;
+	background-color: #ffffff;
+}
+
+div#acui_item {
+	border: solid 1px #99bbff;
+}
+
+div#acui_item.acui_item_select {
+	color: #000000;
+	border: solid 1px #ffbb99;
+}
